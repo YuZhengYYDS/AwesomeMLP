@@ -11,9 +11,11 @@ actual images in fig/view_mnist.py.
 # Standard library
 import pickle
 import gzip
+import os
 
 # Third-party libraries
 import numpy as np
+
 
 def load_data():
     """Return the MNIST data as a tuple containing the training data,
@@ -38,8 +40,11 @@ def load_data():
     That's done in the wrapper function ``load_data_wrapper()``, see
     below.
     """
-    f = gzip.open('../data/mnist.pkl.gz', 'rb')
-    training_data, validation_data, test_data = pickle.load(f)
+    #fOR WINDOWS USERS "PATH FRIENDLY"
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Directory of the script
+    data_path = os.path.join(script_dir, '../data/mnist.pkl.gz')  # Construct path
+    f = gzip.open(data_path, 'rb')
+    training_data, validation_data, test_data = pickle.load(f,encoding='latin1')
     f.close()
     return (training_data, validation_data, test_data)
 

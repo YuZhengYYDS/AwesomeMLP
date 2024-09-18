@@ -10,7 +10,8 @@ import pickle
 import sys
 
 # My libraries
-sys.path.append('../src/')
+#sys.path.append('../src/')
+sys.path.insert(0, 'C:\GitHubProjects\AwesomeMLP\src')
 import mnist_loader
 
 # Third-party libraries
@@ -20,7 +21,9 @@ import numpy as np
 
 def main():
     training_set, validation_set, test_set = mnist_loader.load_data()
+    
     images = get_images(training_set)
+    plot_mnist_digit(images[0])
     
  
 def get_images(training_set):
@@ -39,3 +42,6 @@ def plot_mnist_digit(image):
     plt.yticks(np.array([]))
     plt.show()
     
+#### Main
+if __name__ == "__main__":
+    main()
