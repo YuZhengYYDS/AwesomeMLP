@@ -8,3 +8,9 @@ $ conda create --name MLPenv python=3.8
 $ conda activate MLPenv
 $ pip install -r requirements.txt
 ```
+## Maintain Dependencies
+All required packages should be listed clearly in the `requiremens.txt` documents.
+To quickly update the newly installed packages, run the following command:
+``` Shell
+$ pip freeze > requirements.txt
+```
