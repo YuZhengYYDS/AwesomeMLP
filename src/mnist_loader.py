@@ -45,8 +45,9 @@ def load_data():
 
 def load_data_wrapper():
     """Return a tuple containing ``(training_data, validation_data,
-    test_data)``. Based on ``load_data``, but the format is more
-    convenient for use in our implementation of neural networks.
+    test_data)``. !!!All of the element in this tuple are in form of ZIP!!!
+    Based on ``load_data``, but the format is more convenient for use 
+    in our implementation of neural networks.
 
     In particular, ``training_data`` is a list containing 50,000
     2-tuples ``(x, y)``.  ``x`` is a 784-dimensional numpy.ndarray
@@ -76,9 +77,12 @@ def load_data_wrapper():
 
 def vectorized_result(j):
     """Return a 10-dimensional unit vector with a 1.0 in the jth
-    position and zeroes elsewhere.  This is used to convert a digit
-    (0...9) into a corresponding desired output from the neural
-    network."""
+    position and zeroes elsewhere.  
+    
+    This is used to convert a digit (0...9) into a corresponding 
+    desired output from the neural network. This is called one-hot!!!
+    
+    """
     e = np.zeros((10, 1))
     e[j] = 1.0
     return e
