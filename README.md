@@ -1,6 +1,6 @@
 # AWESOME MLP Tutoriol
 
-This is a modified version for building an MLP network from the Book Neural Networks and Deep Learning written by Michael Nielsen. Sevral modification includes fixing lower version python codes couldn't work in the environment of py3.0+. 
+This is a modified version for building an MLP network from the Book Neural Networks and Deep Learning written by Michael Nielsen. Several modifications include fixing older Python code that was incompatible with the Python 3.0+ environment.
 
 ## Purpose
 This repository mainly serves as a tutoriol for beginners focused on studying MLP built from scratch. I will include my handwritten notes later.

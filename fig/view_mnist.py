@@ -10,7 +10,7 @@ import pickle
 import sys
 
 # My libraries
-#sys.path.append('../src/')
+
 sys.path.insert(0, 'C:\GitHubProjects\AwesomeMLP\src')
 import mnist_loader
 
